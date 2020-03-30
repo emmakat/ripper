@@ -3,7 +3,8 @@
 
 ```
 docker run -d \
-  --name="Ripper" \
+#name the container, perhaps with Ripper_sr0 for example, to use the built in optical drive
+  --name="Ripper_sr0" \
  -v `pwd`/config:/config:rw \ 
  -v `pwd`/rips:/out:rw \ 
  --device=/dev/sr0:/dev/sr0 \ 
