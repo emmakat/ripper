@@ -18,9 +18,9 @@ docker run -d \
   run another docker container but use a different name, for example ripper_sr1 and change the --device=/dev/sr1:/dev/sr1 \ line
   
   ```
-#mkdir config_sr1 rips_sr1
+#mkdir config rips
 docker run -d \
-  --name="Ripper_sr1" \
+  --name="Ripper2" \
  -v `pwd`/config:/config:rw \ 
  -v `pwd`/rips:/out:rw \ 
  --device=/dev/sr1:/dev/sr1 \ 
