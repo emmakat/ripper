@@ -18,7 +18,7 @@ docker run -d \
   run another docker container but use a different name, for example ripper_sr1 and change the --device=/dev/sr1:/dev/sr0 \ line
   
   ```
-docker run docker -d \
+docker run -d \
 --name="Ripper_SR1" \ 
 -v `pwd`/config:/config:rw \
 -v `pwd`/rips:/out:rw \
