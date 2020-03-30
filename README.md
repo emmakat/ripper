@@ -11,10 +11,8 @@ docker run -d \
  --privileged \ 
  emmakat/ripper
 ```
-## Insert the disk into the optical drive then run
-```
-./ripper.sh
-  ```
+## Insert the disk into the optical drive. Take a look at the file ripper.log that is in the config directory and see the progress (and hopefully not see any errors)
+
   ## to use with multiple drives
   run another docker container but use a different name, for example ripper_sr1 and change the --device=/dev/sr1:/dev/sr1 \ line
   
