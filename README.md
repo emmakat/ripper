@@ -1,7 +1,7 @@
-# ripper  inspired by the excellent project https://github.com/rix1337/docker-ripper
+## ripper  inspired by the excellent project https://github.com/rix1337/docker-ripper
 ## Docker run
 
-###name the container, perhaps with Ripper_sr0 for example, to use the built in optical drive
+##name the container, perhaps with Ripper_sr0 for example, to use the built in optical drive
 ```
 docker run -d \
   --name="Ripper_sr0" \
