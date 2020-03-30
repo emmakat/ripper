@@ -4,7 +4,7 @@ First, be sure to name the container, perhaps with Ripper_sr0 for example, to us
 
 ```
 docker run -d \
-  --name="Ripper_sr0" \
+  --name="Ripper" \
  -v `pwd`/config:/config:rw \ 
  -v `pwd`/rips:/out:rw \ 
  --device=/dev/sr0:/dev/sr0 \ 
