@@ -15,15 +15,14 @@ docker run -d \
 ## Insert the disk into the optical drive. Take a look at the file ripper.log that is in the config directory and see the progress (and hopefully not see any errors)
 
   ## to use with multiple drives (still testing this section)
-  run another docker container but use a different name, for example ripper_sr1 and change the --device=/dev/sr1:/dev/sr1 \ line
+  run another docker container but use a different name, for example ripper_sr1 and change the --device=/dev/sr1:/dev/sr0 \ line
   
   ```
-mkdir config rips
-docker run -d \
-  --name="Ripper2" \
- -v `pwd`/config:/config:rw \ 
- -v `pwd`/rips:/out:rw \ 
- --device=/dev/sr1:/dev/sr1 \ 
- --privileged \ 
- emmakat/ripper
+docker run docker -d 
+--name="Ripper_SR1" \ 
+-v `pwd`/config:/config:rw \
+-v `pwd`/rips:/out:rw \
+--device=/dev/sr1:/dev/sr0 
+--privileged \
+emmakat/ripper
 ```
