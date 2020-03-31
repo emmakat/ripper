@@ -16,7 +16,7 @@ STORAGE_CD="/out/Ripper/CD"
 STORAGE_DATA="/out/Ripper/DATA"
 STORAGE_DVD="/out/Ripper/DVD"
 STORAGE_BD="/out/Ripper/BluRay"
-DRIVE="/dev/sr0"
+DRIVE="/dev/sr1"
 
 BAD_THRESHOLD=5
 let BAD_RESPONSE=0
@@ -31,7 +31,7 @@ rm -r *.tmp
 cd $cwd
 
 # get disk info through makemkv and pass output to INFO
-INFO=$"`makemkvcon -r --cache=1 info disc:9999 | grep DRV:0`"
+INFO=$"`makemkvcon -r --cache=1 info disc:9999 | grep DRV:1`"
 # check INFO for optical disk
 EMPTY=`echo $INFO | grep -o 'DRV:0,0,999,0,"'`
 OPEN=`echo $INFO | grep -o 'DRV:0,1,999,0,"'`
