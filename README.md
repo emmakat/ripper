@@ -24,5 +24,5 @@ You must specify the SOURCE_DRIVE, i.e, whichever DVD-ROM or Blu-Ray device you 
 docker run -d -v `pwd`/config:/config:rw -v `pwd`/rips:/out:rw -e SOURCE_DRIVE=/dev/sr0 --privileged --name=ripper emmakat/ripper
 ```
 
-## Insert the disk into the optical drive, then cd into the config directory, and take a look at the file ripper.log where you can see the progress (and hopefully not see any errors)
+## Insert the disk into the optical drive, then cd into the config directory, and take a look at the file ripper.log where you can see the progress (and hopefully not see any errors).
 
