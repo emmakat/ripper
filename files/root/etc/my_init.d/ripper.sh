@@ -2,18 +2,13 @@
 
 # copy default script
 if [[ ! -f /config/ripper.sh ]]; then
-    cp /ripper/ripper.sh /config/ripper.sh
-fi
-
-# copy default profile file
-if [[ ! -f /config/default.mmcp.xml ]]; then
-    cp /ripper/default.mmcp.xml /config/default.mmcp.xml
+ cp /ripper/ripper.sh /config/ripper.sh
 fi
 
 # copy default settings
 if [[ ! -f /config/settings.conf ]] && [[  ! -f /config/enter-your-key-then-rename-to.settings.conf ]]; then
-    cp -f /ripper/settings.conf /config/
-    mv /config/settings.conf /config/enter-your-key-then-rename-to.settings.conf
+ cp -f /ripper/settings.conf /config/
+ mv /config/settings.conf /config/enter-your-key-then-rename-to.settings.conf 
 fi
 
 # fetching MakeMKV beta key
@@ -22,12 +17,11 @@ KEY=$(curl --silent 'https://www.makemkv.com/forum/viewtopic.php?f=5&t=1053'| gr
 # move settings.conf, if found
 mkdir -p /root/.MakeMKV
 if [[ -f  /config/settings.conf ]]; then
-    echo "Found settings.conf. Replacing beta key file."
-    cp -f  /config/settings.conf /root/.MakeMKV/
-    elif [[ -n "$KEY" ]]; then
-    echo "Using MakeMKV beta key: $KEY"
-    echo app_Key = "\"$KEY"\" > /root/.MakeMKV/settings.conf
-    echo app_ccextractor = \"/usr/local/bin/ccextractor\" >> /root/.MakeMKV/settings.conf
+ echo "Found settings.conf. Replacing beta key file."
+ cp -f  /config/settings.conf /root/.MakeMKV/
+elif ! [ "$KEY" = '' ]; then
+ echo "Using MakeMKV beta key: $KEY"
+ echo app_Key = "\"$KEY"\" > /root/.MakeMKV/settings.conf
 fi
 
 # permissions
