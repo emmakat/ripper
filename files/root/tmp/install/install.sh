@@ -72,3 +72,4 @@ sed -i 's/author/artist/g' /usr/bin/ripit
 sed -i 's/day/year/g' /usr/bin/ripit
 
 exit
+ 
