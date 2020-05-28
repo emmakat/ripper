@@ -8,7 +8,7 @@
 #####################################
 
 apt-get update -qq
-apt-get install -qy --allow-unauthenticated build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qt5-default wget libfdk-aac-dev
+apt-get install -qy --allow-unauthenticated build-essential pkg-config libdiscid libmusicbrainz-discid-perl libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qt5-default wget libfdk-aac-dev
 
 #####################################
 #	Download sources and extract    	#
@@ -60,7 +60,7 @@ popd
 #									#
 #####################################
 
-apt-get remove -qy build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qt5-default libfdk-aac-dev
+apt-get remove -qy build-essential pkg-config libdiscid libmusicbrainz-discid-perl libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qt5-default libfdk-aac-dev
 apt-get clean && rm -rf /var/lib/apt/lists/* /var/tmp/*
 
 #####################################
